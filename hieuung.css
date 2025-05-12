@@ -1,0 +1,363 @@
+
+* {
+  box-sizing: border-box;
+}
+
+header.scrolled {
+  background-color: #278e9c; /* xanh pastel dịu nè 🌿 */
+  }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+/* background-color: #278e9c; */
+}
+
+.nav-icons-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* khoảng cách giữa nav và icon */
+}
+/* Login */
+/* #loginModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+    background: #ffffff;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);      
+    padding: 30px;
+    border-radius: 15px;
+    width: 410px;
+  min-height: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+  
+}
+
+.login-box img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.login-box h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+.signin-btn {display: inline-block;
+    background-color: #f06258;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;}
+.signin-btn:hover {
+    background-color: #f4c9c9;
+    text-decoration: none;
+}
+.registerd{color:#565454;text-decoration: none;}
+.registerd + a {
+    text-decoration: underline;
+color: #f06258; }
+.login-box p {
+  font-size: 0.95rem;
+  color: #555;
+} */
+/* .login-box a {
+  text-decoration: none;
+  text-decoration: underline;
+} */
+/* 
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+  padding: 5px;    
+}
+
+.close-btn:hover {
+  color: #333;
+}
+.register-link {
+    margin-left: 10px;
+    text-decoration: underline;
+    color: #f06258;
+}
+
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: scale(0.95);
+}
+to {
+opacity: 1;
+transform: scale(1);
+}
+} */
+/* Bỏ cũng được */
+
+
+/* ul a {
+  color: rgb(67, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+div:hover {
+  color: #ffc107;
+}
+div a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ffc107;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+} */
+.mobile-menu .menu-items a {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu .menu-items a:hover {
+  color: #ffc107; 
+}
+
+
+.mobile-menu .menu-items a::after{
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffc107;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.mobile-menu .menu-items a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* ======== Hamburger + Mobile Nav ======== */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .overlay {
+    display: none;
+  }
+  
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: url('https://i.pinimg.com/736x/6e/85/f6/6e85f65f3322964b0e9893aff274ce77.jpg');
+    /* background: white; */
+    background-size: cover;       /* hoặc 'contain' nếu bạn không muốn cắt ảnh */
+  background-repeat: no-repeat;
+  background-position: center;
+    color: #ffc107;
+    z-index: 999;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    transition: left 0.3s ease;
+  }
+  
+  .mobile-menu.open {
+    left: 0;
+  }
+  
+  .menu-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+    /* background-color: #278e9c; */
+    /* color: white ; */
+  }
+  .menu-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #f1f1f1; /* màu của thanh gạch ngang */
+  }
+  
+  .menu-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu-items li {
+    margin-bottom: 16px;
+  }
+  
+  .menu-items a {
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .overlay.show {
+    display: block;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 998;
+  }
+  .mobile-icons {
+    margin-top: 30px;
+    border-top: 1px solid #f1f1f1; /* thanh ngang ở dưới */
+    padding-top: 20px;
+  }
+  
+  .mobile-icons .search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .mobile-icons .search-box {
+    flex: 1;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 0.5px solid #797878;
+    outline: none;
+  }
+  
+  .mobile-menu .search-container i.fas.fa-search {
+    color: #f1f1f1 !important;
+  }
+  
+  .mobile-icons i {
+    font-size: 18px;
+    color: #f1f1f1 !important;
+  }
+  
+  .icon-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f1f1f1;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  .icon-link i {
+    color: inherit; 
+  }
+  .icon-link:hover {
+    color: #ffc107;}
+    .icons i {
+      cursor: pointer;
+      font-size: 18px;
+      color: white;
+    }
+    
+  /* header {
+    position: relative; 
+  } */
+  
+  /* ======== Responsive Rules ======== */
+  @media (max-width: 1000px) {
+    .main-nav,
+    .icons .search-box{
+      display: none;
+    }
+    
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: absolute;
+      right: 60px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+    }
+  
+    .hamburger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1000;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+    .hamburger-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+  
+  }
+  
+  @media (min-width: 1001px) {
+    .mobile-menu,
+    .overlay,
+    .hamburger {
+      display: none !important;
+    }
+  
+    .main-nav {
+      display: block;
+    }
+  }
+  
